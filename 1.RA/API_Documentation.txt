@@ -1,0 +1,140 @@
+API URL:
+
+1) Health Status Check:
+URL: http://localhost:8050/patientinfo/health/status
+
+2) Registration:
+URL: http://localhost:8050/patientinfo/registration
+
+Payload: 
+
+{
+   "firstName":"Soubhab",
+   "lastName":"Pathak",
+   "dob":"1984-05-24",
+   "gender":"male",
+   "addressLine1":"Nandankanan, Tolaphatak",
+   "addressLine2":"P.O. Chinsurah, Dist: Hooghly",
+   "addressLine3":"",
+   "pinNumber":"712101",
+   "phoneNo":"9830926629",
+   "emailId":"dev.soubhab.pathak@gmail.com",
+   "adharCardNo":"1111 2222 3333",
+   "height":"182",
+   "weight":"85",
+   "passwordText":"sss@123+",
+   "secretQuestion":"What is your pet name?",
+   "secretAnswer":"Dobby",
+   "consentText":"I hereby given consent to provide data voluntarily."
+}
+
+3) Login:
+URL: http://localhost:8050/patientinfo/login
+
+Payload:
+
+{
+	"phoneNo":"9830926629",
+	"passwordText":"sss@123+"
+}
+
+4) Forget Password: 
+URL: http://localhost:8050/patientinfo/forget/password
+
+Payload:
+
+{
+	"phoneNo":"9830926629",
+	"passwordText":"sss@1234+",
+	"secretQuestion":"What is your pet name?",
+	"secretAnswer":"Dobby"
+}
+
+5) http://localhost:8050/patientdata/uploadCovidSymtomsReg
+
+Payload: 
+patientData = 
+{
+	"patientId":1,
+	"feverTemparature":"104",
+	"soreThroatStatus":"yes",
+	"bodyAcheStatus":"yes",
+	"smellStatus":"yes",
+	"tasteStatus":"yes",
+	"diarrheaStatus":"yes",
+	"consultantDoctor":"Dr S Pathak",
+	"doctorSuggestion":"Take rest and take medicines.",
+	"symptomDate":"2021-04-25",
+	"covidTestDate":"2021-05-25",
+	"medicalHistory":"diabetis",
+	"currentMedication":"Yes",
+	"smokingHabit":"yes",
+    "consentText":"I hereby given consent to provide data voluntarily."
+}
+
+covidDataFile = 
+chestXrayFile = 
+
+6) http://localhost:8050/patientdata/uploadSPO2infoReg
+
+PayLoad: 
+
+sampleData = 
+{
+	"patientId":1,
+	"phoneName":"Galaxy",
+	"phoneManufacturer":"Samsung",
+	"phoneOsName":"Android",
+	"phoneOsVersion":"8.0.4",
+	"spo2DeviceName":"Oxymeter",
+	"spo2DeviceModelNumber":"Properpine_8.6.2",
+	"spo2Value":108,
+	"puslseRate":96,
+    "consentText":"I hereby given consent to provide data voluntarily."
+}
+
+coughSoundFile = 
+
+7) GET: http://localhost:8050/patientdata/phoneDeviceDetails/1
+
+8) GET: http://localhost:8050/patientdata/spo2DeviceDetails/1
+
+9) http://localhost:8050/patientdata/uploadSPO2Data
+
+Payload: 
+
+sampleData = 
+{
+	"patientId":1,
+	"spo2Value":108,
+	"puslseRate":96,
+    "consentText":"I hereby given consent to provide data voluntarily."
+}
+
+coughSoundFile = 
+
+10) 
+
+payload: http://localhost:8050/patientdata/uploadCovidSymtoms
+
+patientData = 
+{
+	"patientId":1,
+	"feverTemparature":"104",
+	"soreThroatStatus":"yes",
+	"bodyAcheStatus":"yes",
+	"smellStatus":"yes",
+	"tasteStatus":"yes",
+	"diarrheaStatus":"yes",
+    "consentText":"I hereby given consent to provide data voluntarily."
+}
+
+chestXrayFile = 
+
+11) This will check whether the patient Data or devices are available or not
+
+GET: http://localhost:8050/patientdata/patientDataInfo/1
+
+Output : {"isPatientDataAvailable":"yes","isDeviceRegistered":"no"}
+
+12) GET: http://localhost:8050/patientinfo/patient/1
