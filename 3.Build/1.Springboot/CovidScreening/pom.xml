@@ -10,8 +10,9 @@
 	</parent>
 	<groupId>ac.iit.kgp.covid.screening</groupId>
 	<artifactId>CovidScreening</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.3.RELEASE</version>
 	<name>CovidScreening</name>
+	<packaging>war</packaging>
 	<description>Covid Screening project for Spring Boot</description>
 	
 	<properties>
