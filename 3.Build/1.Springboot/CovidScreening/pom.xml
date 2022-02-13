@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>ac.iit.kgp.covid.screening</groupId>
 	<artifactId>CovidScreening</artifactId>
-	<version>1.0.3.RELEASE</version>
+	<version>1.0.4.RELEASE</version>
 	<name>CovidScreening</name>
 	<packaging>war</packaging>
 	<description>Covid Screening project for Spring Boot</description>
@@ -34,8 +34,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>2.3.10.RELEASE</version>
+			<exclusions>
+				<exclusion>
+				    <artifactId>spring-boot-starter-tomcat</artifactId>
+				    <groupId>org.springframework.boot</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
-
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
