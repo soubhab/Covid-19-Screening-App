@@ -1,3 +1,5 @@
+create database if not exists covid19;
+
 CREATE TABLE `covid19`.`patient_info` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `firstName` VARCHAR(45) NOT NULL,
@@ -100,3 +102,5 @@ CREATE TABLE `covid19`.`symptom_data` (
   `DB_CHAR3` VARCHAR(45) NULL,
   `DB_CHAR4` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
+  
+  Commit;

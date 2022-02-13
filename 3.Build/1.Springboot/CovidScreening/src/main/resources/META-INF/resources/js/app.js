@@ -6,6 +6,6 @@ function getCurrentYear() {
 
 function returnBaseUrl()
 {
-	var url = "http://localhost:8050/";
+	var url = "http://localhost:8080/CovidScreening-1.0.4.RELEASE/";
 	return url;
 }
