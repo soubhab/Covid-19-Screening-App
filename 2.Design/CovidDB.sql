@@ -103,4 +103,4 @@ CREATE TABLE `covid19`.`symptom_data` (
   `DB_CHAR4` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
   
-  Commit;
+  Commit; 
